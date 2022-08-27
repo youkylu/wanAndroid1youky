@@ -3,9 +3,13 @@ plugins {
 }
 
 dependencies {
-    implementation(Libs.Google.Dagger.hiltCore)
+    implementation(projectDependency(Lib.CORE))
+
     implementation(Libs.kotlin)
     implementation(Libs.kotlinX)
 
-    kapt(Libs.Google.Dagger.hiltCompiler)
+    implementation(Libs.Google.Dagger.hiltCore)
+
+    kapt(Libs.Google.Dagger.hiltAndroidCompiler)
+
 }

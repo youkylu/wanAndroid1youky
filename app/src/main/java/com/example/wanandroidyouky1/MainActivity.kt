@@ -15,14 +15,14 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.wanandroidyouky1.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-const val mRequestCode = 26
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var mPermissionLauncher: ActivityResultLauncher<String>
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

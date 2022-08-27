@@ -13,6 +13,5 @@
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.wanAndroid.profile.view.ProfileFragment"
-
         />
 </navigation>

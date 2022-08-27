@@ -43,10 +43,21 @@ android {
 
 dependencies {
     //modules
+    implementation(projectDependency(Feature.AUTH_DATA))
+    implementation(projectDependency(Feature.AUTH_USECASE))
+    implementation(projectDependency(Feature.HOME_DATA))
+    implementation(projectDependency(Feature.HOME_USECASE))
     implementation(projectDependency(Feature.HOME_VIEW))
+    implementation(projectDependency(Feature.PROFILE_DATA))
+    implementation(projectDependency(Feature.PROFILE_USECASE))
     implementation(projectDependency(Feature.PROFILE_VIEW))
+    implementation(projectDependency(Lib.CORE))
+    implementation(projectDependency(Lib.DATA_STORE_MANAGER_DATA))
+    implementation(projectDependency(Lib.DATA_STORE_MANAGER_USECASE))
     implementation(projectDependency(Lib.IMAGE_SERVICE_DATA))
     implementation(projectDependency(Lib.IMAGE_SERVICE_USECASE))
+    implementation(projectDependency(Lib.NETWORK_DATA))
+    implementation(projectDependency(Lib.NETWORK_USECASE))
 
     //android libs
     implementation (Libs.AndroidX.appcompat)

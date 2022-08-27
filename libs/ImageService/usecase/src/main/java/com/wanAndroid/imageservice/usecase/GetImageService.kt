@@ -10,6 +10,6 @@ class GetImageService @Inject constructor(
     private val imageDataStore: ImageDataStore
 ) {
     operator fun invoke(context: Context, imageRequest: ImageRequest, target: ImageView) {
-        imageDataStore.loadImage(imageRequest)
+        imageDataStore.loadImage(context,imageRequest, target)
     }
 }

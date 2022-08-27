@@ -1,20 +1,38 @@
 package com.wanAndroid.profile.view
 
-import android.content.Context
-import android.widget.ImageView
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.wanAndroid.imageservice.usecase.GetImageService
-import com.wanAndroid.imageservice.usecase.model.ImageRequest
+import androidx.lifecycle.viewModelScope
+import com.wanAndroid.core.model.ApiResult
+import com.wanAndroid.profile.usecase.LoadBannerPic
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class ProfileViewModel @Inject constructor(
-    private val getImageService: GetImageService
-):ViewModel(){
+    private val loadBannerPic: LoadBannerPic,
+) : ViewModel() {
+    private val _banner = MutableLiveData<String>()
+    val banner: LiveData<String>
+        get() = _banner
 
+    fun getPhoto() {
+        viewModelScope.launch {
+            val path = loadBannerPic()
+            if (path is ApiResult.Success) {
+                _banner.postValue(path.data)
+            } else {
+                //fixme need show Error page
+            }
 
-    fun loadImage(context:Context, imageRequest: ImageRequest, target:ImageView){
-        getImageService(context, imageRequest, target)
+        }
     }
+
+    fun loadPic() {
+//        getImageService(it, ImageRequest(url = path), binding.banner)
+    }
+
+
 }

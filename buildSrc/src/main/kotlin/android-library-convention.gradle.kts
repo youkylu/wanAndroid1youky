@@ -18,7 +18,7 @@ android {
 }
 
 dependencies {
-
+    implementation(projectDependency(Lib.CORE))
     implementation(Libs.AndroidX.Lifecycle.liveData)
     implementation(Libs.AndroidX.Lifecycle.runtime)
     implementation(Libs.AndroidX.Lifecycle.viewModel)
