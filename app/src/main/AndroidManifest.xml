@@ -22,6 +22,7 @@
 
         <activity android:name=".MainActivity"
             android:launchMode="singleTask"
+            android:configChanges="screenLayout|screenSize|smallestScreenSize|orientation"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,6 +30,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="com.wanAndroid.search.view.SearchActivity"
+            android:launchMode="singleTask"/>
 
     </application>
 

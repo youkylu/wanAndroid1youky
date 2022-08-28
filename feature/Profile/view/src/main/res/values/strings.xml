@@ -2,5 +2,6 @@
 <resources>
     <string name="profile_name">profile</string>
     <string name="image_desc">banner</string>
+    <string name="logout">logout</string>
 
 </resources>

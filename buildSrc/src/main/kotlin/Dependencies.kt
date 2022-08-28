@@ -41,6 +41,7 @@ object Libs {
         const val fragmentKtx = "androidx.fragment:fragment-ktx:1.3.5"
 
         object Lifecycle {
+            const val liveDataCore = "androidx.lifecycle:lifecycle-livedata-core:2.5.0"
             const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
             const val runtime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
             const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
@@ -99,12 +100,16 @@ fun DependencyHandler.projectDependency(project: Lib): ProjectDependency =
 enum class Feature(val projectName: String) {
     AUTH_DATA("AuthData"),
     AUTH_USECASE("AuthUsecase"),
+    AUTH_VIEW("AuthView"),
     HOME_DATA("HomeData"),
     HOME_USECASE("HomeUsecase"),
     HOME_VIEW("HomeView"),
     PROFILE_DATA("ProfileData"),
     PROFILE_USECASE("ProfileUsecase"),
     PROFILE_VIEW("ProfileView"),
+    SEARCH_DATA("SearchData"),
+    SEARCH_USECASE("SearchUsecase"),
+    SEARCH_VIEW("SearchView"),
 }
 
 enum class Lib(val projectName: String) {

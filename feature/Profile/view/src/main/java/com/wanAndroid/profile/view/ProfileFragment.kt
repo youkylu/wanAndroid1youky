@@ -15,15 +15,15 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class ProfileFragment: Fragment() {
+class ProfileFragment : Fragment() {
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
     @Inject
-    lateinit var getImageService:GetImageService
+    lateinit var getImageService: GetImageService
 
-    private val viewModel:ProfileViewModel by viewModels()
+    private val viewModel: ProfileViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,15 +38,16 @@ class ProfileFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initOberser()
         viewModel.getPhoto()
+        binding.logoutBtn.setOnClickListener {
+            viewModel.logout()
+        }
     }
 
-    fun initOberser(){
-        viewModel.banner.observe(viewLifecycleOwner, Observer { path->
+    fun initOberser() {
+        viewModel.banner.observe(viewLifecycleOwner, Observer { path ->
             context?.let {
-//                Log.d( "youkypath",path)
                 getImageService(it, ImageRequest(url = path), binding.banner)
             }
         })
-
     }
 }

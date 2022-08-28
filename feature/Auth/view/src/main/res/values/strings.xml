@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_name_hint">user name</string>
+    <string name="password_hint">password</string>
+    <string name="login">Login</string>
+    <string name="loginInput">账号lujunjie密码123456</string>
+</resources>

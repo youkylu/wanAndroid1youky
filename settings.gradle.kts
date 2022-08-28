@@ -2,6 +2,7 @@ mapOf(
     "app" to "app",
     "AuthData" to "feature/Auth/data",
     "AuthUsecase" to "feature/Auth/usecase",
+    "AuthView" to "feature/Auth/view",
     "Core" to "libs/Core",
     "DataStoreManagerData" to "libs/DataStoreManager/data",
     "DataStoreManagerUsecase" to "libs/DataStoreManager/usecase",
@@ -15,6 +16,9 @@ mapOf(
     "ProfileData" to "feature/Profile/data",
     "ProfileUsecase" to "feature/Profile/usecase",
     "ProfileView" to "feature/Profile/view",
+    "SearchData" to "feature/Search/data",
+    "SearchUsecase" to "feature/Search/usecase",
+    "SearchView" to "feature/Search/view",
 ).forEach{ (projectName, projectPath)->
     include(":$projectName")
     project(":$projectName").projectDir = File(projectPath)

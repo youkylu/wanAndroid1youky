@@ -3,8 +3,8 @@ plugins {
 }
 
 dependencies {
+    implementation(projectDependency(Feature.AUTH_USECASE))
     implementation(projectDependency(Feature.PROFILE_USECASE))
-
     implementation(projectDependency(Lib.IMAGE_SERVICE_USECASE))
   
     implementation(Libs.AndroidX.Lifecycle.liveData)

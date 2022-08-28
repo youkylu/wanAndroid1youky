@@ -8,5 +8,6 @@ dependencies {
     implementation(Libs.kotlin)
     implementation(Libs.kotlinX)
 
+
     kapt(Libs.Google.Dagger.hiltCompiler)
 }
