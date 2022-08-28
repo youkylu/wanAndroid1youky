@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
                         false
                     }
                     if (shouldShow) {
-                        Toast.makeText(this@MainActivity, "没有存储权限，请手动授权", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@MainActivity, "没有存储权限，请手动授权", Toast.LENGTH_SHORT).show()
                     }else{
                         //TODO
                     }
